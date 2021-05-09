@@ -1,0 +1,8 @@
+manifest_version = 1
+
+[backends."api.openweathermap.org"]
+host = "api.openweathermap.org"
+port = 443
+
+[dictionaries."weather_auth"]
+api_token = "API token for https://openweathermap.org"
