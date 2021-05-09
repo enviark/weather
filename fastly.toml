@@ -1,0 +1,9 @@
+# This file describes a Fastly Compute@Edge package. To learn more visit:
+# https://developer.fastly.com/reference/fastly-toml/
+
+authors = ["pdelolmo@fastly.com", "kailan@enviark.com"]
+description = "Weather dashboard at the edge"
+language = "rust"
+manifest_version = 1
+name = "weather-release"
+service_id = "3BCRKNm5R0iXXcfZzmwmn8"
