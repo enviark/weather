@@ -1,8 +1,14 @@
 manifest_version = 1
 
-[backends."api.openweathermap.org"]
+[[backend]]
+name = "api.openweathermap.org"
 host = "api.openweathermap.org"
 port = 443
 
-[dictionaries."weather_auth"]
-api_token = "API token for https://openweathermap.org"
+[[dictionary]]
+name = "weather_auth"
+
+[[dictionary.key]]
+key = "key"
+type = "string"
+comment = "API token for openweathermap.org"
