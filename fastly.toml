@@ -7,3 +7,17 @@ language = "rust"
 manifest_version = 1
 name = "weather-release"
 service_id = "3BCRKNm5R0iXXcfZzmwmn8"
+
+[[setup.backends]]
+prompt = "OpenWeatherMap API Server"
+name = "api.openweathermap.org"
+host = "api.openweathermap.org"
+port = 443
+
+[[setup.dictionaries]]
+name = "weather_auth"
+
+[[setup.dictionaries.items]]
+prompt = "API token for openweathermap.org"
+key = "key"
+input_type = "string"
