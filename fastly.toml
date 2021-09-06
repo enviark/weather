@@ -11,8 +11,6 @@ service_id = "3BCRKNm5R0iXXcfZzmwmn8"
 [[setup.backends]]
 prompt = "OpenWeatherMap API Server"
 name = "api.openweathermap.org"
-address = "api.openweathermap.org"
-port = 443
 
 [[setup.dictionaries]]
 name = "weather_auth"
