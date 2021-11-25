@@ -37,7 +37,7 @@ fn main(req: Request) -> Result<Response, Error> {
             let local = Local::now().date();
 
             // Log output helps you debug issues when developing your service.
-            // Run `fastly logs tail` to see this output live as you make requests.
+            // Run `fastly log-tail` to see this output live as you make requests.
             println!(
                 "Requesting weather for {}, {} ({}, {})",
                 location.latitude(),
