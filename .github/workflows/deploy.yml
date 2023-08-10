@@ -19,3 +19,5 @@ jobs:
       uses: fastly/compute-actions@v5
       env:
         FASTLY_API_TOKEN: ${{ secrets.FASTLY_API_TOKEN }}
+      with:
+        service_id: '3BCRKNm5R0iXXcfZzmwmn8'
