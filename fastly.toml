@@ -6,7 +6,7 @@ description = "Weather dashboard at the edge"
 language = "rust"
 manifest_version = 3
 name = "weather-release"
-service_id = "3BCRKNm5R0iXXcfZzmwmn8"
+service_id = ""
 
 [setup]
 

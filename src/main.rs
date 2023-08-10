@@ -221,8 +221,13 @@ fn generate_view(
 }
 
 fn get_api_key() -> String {
-    match ConfigStore::open("weather_auth").get("key") {
-        Some(key) => key,
-        None => panic!("No OpenWeatherMap API key!"),
-    }
+    // match ConfigStore::open("weather_auth").get("key") {
+    //     Some(key) => key,
+    //     None => panic!("No OpenWeatherMap API key!"),
+    // }
+
+    // The GitHub Action that generates preview URLs does not
+    // currently support resources, so we are hard-coding the token
+    // for now. I don't mind this token being leaked, it's free.
+    "380fdb5dcee55cf704461bbba3b617bd".into()
 }
