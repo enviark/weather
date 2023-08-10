@@ -16,6 +16,6 @@ jobs:
           target: wasm32-wasi # WebAssembly target
 
     - name: Deploy to Compute@Edge
-      uses: fastly/compute-actions@v2
+      uses: fastly/compute-actions@v5
       env:
         FASTLY_API_TOKEN: ${{ secrets.FASTLY_API_TOKEN }}
