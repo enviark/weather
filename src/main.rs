@@ -2,11 +2,10 @@ use serde::{Deserialize, Serialize};
 
 use chrono::{Date, Datelike, Local};
 use tinytemplate::TinyTemplate;
-use weather_helpers;
 use weather_helpers::Season;
 
 use fastly::geo::{geo_lookup, Geo};
-use fastly::Dictionary;
+use fastly::ConfigStore;
 use fastly::{
     http::{header, Method, StatusCode},
     Error, Request, Response,
@@ -212,7 +211,7 @@ fn generate_view(
         rain: format!("{}", api_response.minutely[0].precipitation),
         wind: format!("{}", api_response.current.wind_speed),
         humidity: format!("{}", api_response.current.humidity),
-        description: format!("{}", api_response.current.weather[0].description).replace("\"", ""),
+        description: api_response.current.weather[0].description.to_string().replace("\"", ""),
         icon: weather_helpers::get_feather_weather_icon(&api_response.current.weather[0].icon),
         next_days,
         is_metric: units == "metric",
@@ -222,7 +221,7 @@ fn generate_view(
 }
 
 fn get_api_key() -> String {
-    match Dictionary::open("weather_auth").get("key") {
+    match ConfigStore::open("weather_auth").get("key") {
         Some(key) => key,
         None => panic!("No OpenWeatherMap API key!"),
     }

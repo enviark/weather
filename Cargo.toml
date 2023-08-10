@@ -8,9 +8,9 @@ edition = "2018"
 debug = true
 
 [dependencies]
-fastly = "^0.8.0"
-serde_json = "1.0.57"
-tinytemplate = "1.1"
+fastly = "0.9.5"
+serde_json = "1.0.104"
+tinytemplate = "1.2.1"
 serde = { version = "1.0", features = ["derive"] }
-chrono = "0.4.15"
-weather_helpers = "0.1.2"
+chrono = "0.4.26"
+weather_helpers = "0.1.3"

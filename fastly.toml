@@ -17,11 +17,11 @@ service_id = "3BCRKNm5R0iXXcfZzmwmn8"
       description = "OpenWeatherMap API Server"
       port = 443
 
-  [setup.dictionaries]
+  [setup.config_stores]
 
-    [setup.dictionaries.weather_auth]
+    [setup.config_stores.weather_auth]
 
-      [setup.dictionaries.weather_auth.items]
+      [setup.config_stores.weather_auth.items]
 
-        [setup.dictionaries.weather_auth.items.key]
+        [setup.config_stores.weather_auth.items.key]
           description = "API token for openweathermap.org"
